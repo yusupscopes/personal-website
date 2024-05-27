@@ -7,13 +7,21 @@ export default function About() {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi, I'm Yusup.
-            <br className="hidden lg:inline-block" />I love to build amazing
+            <br className="hidden lg:inline-block" />I love to build impactful
             apps.
           </h1>
           <p className="mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-            laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-            Laborum, voluptas natus?
+            A passionate web developer with 5 years of experience in building
+            dynamic and user-friendly web applications. With a strong foundation
+            in front-end technologies like ReactJS, JavaScript, HTML, and CSS, I
+            enjoy transforming ideas into visually appealing and functional
+            digital experiences.
+          </p>
+          <p className="mb-8 leading-relaxed">
+            Over the years, I’ve honed my skills by working on various projects,
+            from simple landing pages to complex web applications. I take pride
+            in writing clean, efficient code and continuously learning new
+            techniques to stay current in this ever-evolving field.
           </p>
           <div className="flex justify-center">
             <a
