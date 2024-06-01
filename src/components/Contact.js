@@ -1,27 +1,32 @@
 import React from "react";
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
+  const [formState, setFormState] = React.useState(initialState);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
+      body: data,
     })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
+      .then(() => alert("Form successfully submitted"))
+      .catch((error) => alert("Error submitting form", error));
   }
 
   return (
@@ -87,7 +92,9 @@ export default function Contact() {
               id="name"
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
+              value={formState.name}
+              onChange={handleChange}
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -99,7 +106,9 @@ export default function Contact() {
               id="email"
               name="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
+              value={formState.email}
+              onChange={handleChange}
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -113,7 +122,9 @@ export default function Contact() {
               id="message"
               name="message"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
+              value={formState.message}
+              onChange={handleChange}
+              required
             />
           </div>
           <button
