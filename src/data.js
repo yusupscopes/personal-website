@@ -1,35 +1,19 @@
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "Online Travel Agent Website",
+    subtitle: "Nuxt, Nodejs",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+      "I developed a comprehensive online travel agent website designed to streamline the travel booking process for users. This platform offers an integrated solution for booking flights, hotels, and tours, making travel planning seamless and efficient.",
+    image: "./project-1.png",
+    link: "",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Chat Commerce Platform",
+    subtitle: "Vue and Nodejs",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reactbootcamp.com",
-  },
-  {
-    title: "DevChat",
-    subtitle: "React and Firebase",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://reactbootcamp.com",
-  },
-  {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+      "This project is a robust communication and transaction platform designed to enhance customer interaction and streamline business processes. The platform features a broadcast system, a chat system using the WhatsApp Business API (WABA), comprehensive user management, and secure transaction handling.",
+    image: "./project-2.png",
+    link: "",
   },
 ];
 

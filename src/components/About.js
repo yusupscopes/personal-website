@@ -1,4 +1,5 @@
 import React from "react";
+import { calculateYearsFromNow } from "../utils/date";
 
 export default function About() {
   return (
@@ -11,11 +12,12 @@ export default function About() {
             apps.
           </h1>
           <p className="mb-8 leading-relaxed">
-            A passionate web developer with 5 years of experience in building
-            dynamic and user-friendly web applications. With a strong foundation
-            in front-end technologies like ReactJS, JavaScript, HTML, and CSS, I
-            enjoy transforming ideas into visually appealing and functional
-            digital experiences.
+            A passionate web developer with{" "}
+            {calculateYearsFromNow("2019-02-11")} years of experience in
+            building dynamic and user-friendly web applications. With a strong
+            foundation in front-end technologies like ReactJS, JavaScript, HTML,
+            and CSS, I enjoy transforming ideas into visually appealing and
+            functional digital experiences.
           </p>
           <p className="mb-8 leading-relaxed">
             Over the years, I’ve honed my skills by working on various projects,
@@ -38,11 +40,12 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg">
           <img
             className="object-cover object-center rounded"
+            width="300"
             alt="hero"
-            src="./coding.svg"
+            src="./yusup.jpeg"
           />
         </div>
       </div>
