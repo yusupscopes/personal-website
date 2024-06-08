@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Hilink",
+    subtitle: "Nextjs, Tailwindcss",
+    description:
+      "Hilink is a comprehensive camp travel guide designed to help adventurers find the perfect campsite for their next outdoor experience. As the creator of this website, I aimed to provide a user-friendly platform that offers detailed information on a variety of camping destinations, tailored recommendations, and essential planning tools.",
+    image: "./project-3.gif",
+    link: "https://camptraveler-hilink.netlify.app/",
+  },
+  {
     title: "Online Travel Agent Website",
     subtitle: "Nuxt, Nodejs",
     description:
